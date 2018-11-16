@@ -1,3 +1,5 @@
+# cs 13
+
 class BinarySearchTree:
   def __init__(self, value):
     self.value = value
@@ -5,7 +7,7 @@ class BinarySearchTree:
     self.right = None
 
   def depth_first_for_each(self, cb):
-    pass    
+    pass
 
   def breadth_first_for_each(self, cb):
     pass
