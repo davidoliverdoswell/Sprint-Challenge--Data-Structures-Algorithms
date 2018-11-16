@@ -6,8 +6,17 @@ class BinarySearchTree:
     self.left = None
     self.right = None
 
-  def depth_first_for_each(self, cb):
-    pass
+  def depth_first_for_each(self, cb, graph, node, path=[]):
+    path += [node]
+
+    for neighbor in graph[node]:
+        if neighbor not in path:
+            path = depth_first_for_each(self, cb, graph, node, path)
+
+    return path
+
+    dict = {1: [2,3], 2: [4,5], 3: [5], 4: [6], 5: [6], 6: [7], 7: []}
+    print(depth_first_for_each(dict, 1))
 
   def breadth_first_for_each(self, cb):
     pass
